@@ -1,0 +1,7 @@
+***************** titulo bloqueados no financeiro *************************************
+
+update cr_titulos set ind_bloqueio_pgto = 0, dta_bloqueio_pgto = null where ind_bloqueio_pgto = 1 and cod_unidade = 2
+
+****************** CASO AINDA PERMANEÇA BLOQUEADO, LIMPAR ESSA TABELA ******************
+select * from crw_bloqueios_pgto where cod_unidade = 2 for update
+*******************************************************************************************
